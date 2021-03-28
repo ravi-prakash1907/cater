@@ -1,16 +1,4 @@
-# cater
- 
-
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/ya332/deepextract/graphs/commit-activity)
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![PyPI version fury.io](https://badge.fury.io/py/deepextract.svg)](https://gitHub.com/ya332/deepextract/)
-[![PyPI pyversions](https://img.shields.io/pypi/pyversions/deepextract.svg)](https://gitHub.com/ya332/deepextract/)
-[![PyPI status](https://img.shields.io/pypi/status/deepextract.svg)](https://pypi.python.org/pypi/deepextract/)
-[![Downloads](https://pepy.tech/badge/deepextract)](https://pepy.tech/project/deepextract)
-[![GitTutorial](https://img.shields.io/badge/PR-Welcome-%23FF8300.svg?)](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
-
-
-# cater 🔥
+# cater 📤
 
 A Python library for instent file sharing, based on TCP.
 
@@ -71,17 +59,18 @@ python -m unittest
 ## Licence ✅
 
 MIT. See LICENSE.md
-
+<!--
 ## Version
 
 Follows syntax vM.M.P
 First is major and means not backwards compatible changes. Second is minor and means backwards compatible changes. 
 Third is patch and means small backwards compatible changes.
 
-The manual place of source of truth is at `deepextract/__init__.py`
+The manual place of source of truth is at `cater/__init__.py`
 
 Source: https://packaging.python.org/guides/single-sourcing-package-version/#single-sourcing-the-version
 
 ## Authors ✏️
 
-`deepextract` was written by `Yigit Alparslan <alparslanyigitcan@gmail.com>`.
+`cater` was written by `Ravi Prakash`.
+-->
