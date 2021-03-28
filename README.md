@@ -20,7 +20,7 @@ pip install cater
 or
 -->
 ```sh
-pip install git+github.com/ravi-prakash1907/cater.git
+pip install git+https://github.com/ravi-prakash1907/cater.git
 ```
 
 ## Requirements 🌌
