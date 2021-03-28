@@ -1,6 +1,6 @@
 ## importing modules
-#from shareBox import server as sender
-#from shareBox import client as receiver
+## from shareBox import server as sender
+## from shareBox import client as receiver
 import server as sender
 import client as receiver
 
