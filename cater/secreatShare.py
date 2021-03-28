@@ -40,7 +40,7 @@ class secreatShare():
 
 ######################
 
-
+'''
 ## main application ##
 if __name__ == '__main__':
     flag = True
@@ -67,3 +67,5 @@ if __name__ == '__main__':
         print("\nSomething went wrong!!\nApp terminated unexpectedly!!")
     else:
         print("\nThanks for using 'Secreat Share'!\n")
+
+'''
