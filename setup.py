@@ -7,7 +7,7 @@ setup(
     url='https://github.com/ravi-prakash1907/cater.git', # post the http "clone" link
     author='Ravi Prakash',
     author_email='ravi.cs20@iiitmk.ac.in',
-    license='unlicense',
-    packages=['cater'],
+    license='MIT',
+    packages=['cater','shareBox'],
     zip_safe=False
 )
