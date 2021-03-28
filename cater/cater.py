@@ -1,12 +1,10 @@
 ## importing modules
 from shareBox import server as sender
 from shareBox import client as receiver
-#import server as sender
-#import client as receiver
 
 ######################
 
-class secreatShare():
+class cater():
     def __init__(self, menuOption=""):
         ###
         self.__mainMenu = "\n Menu\n"+"-"*6+"\n\n1. Send Files! \n2. Receive Files!"+menuOption
@@ -19,7 +17,7 @@ class secreatShare():
         return ch
 
     ## mainApp
-    def secreatShare(self):
+    def cater(self):
         ## making host to share files
         if self.choice == '1':
             Sender = sender.server()
@@ -48,9 +46,9 @@ def app():
 
     while flag:
         ## creating an instance
-        secreatShareApp = secreatShare(addOnMenu)
+        caterApp = cater(addOnMenu)
         ## sharing the files
-        flag = secreatShareApp.secreatShare()
+        flag = caterApp.cater()
 
         ## adding exit choice in menu
         if flag and firstRun:
@@ -59,43 +57,10 @@ def app():
             addOnMenu = "\n*  Any other key to exit!!"
         
         ## deleting current instence on Secreat Share App
-        del(secreatShareApp)
+        del(caterApp)
     
     ## exit prompt
     if firstRun:
         print("\nSomething went wrong!!\nApp terminated unexpectedly!!")
     else:
         print("\nThanks for using 'Secreat Share'!\n")
-
-
-
-
-'''
-## main application ##
-if __name__ == '__main__':
-    flag = True
-    firstRun = True
-    addOnMenu = ''
-
-    while flag:
-        ## creating an instance
-        secreatShareApp = secreatShare(addOnMenu)
-        ## sharing the files
-        flag = secreatShareApp.secreatShare()
-
-        ## adding exit choice in menu
-        if flag and firstRun:
-            firstRun = False
-        if firstRun is False:
-            addOnMenu = "\n*  Any other key to exit!!"
-        
-        ## deleting current instence on Secreat Share App
-        del(secreatShareApp)
-    
-    ## exit prompt
-    if firstRun:
-        print("\nSomething went wrong!!\nApp terminated unexpectedly!!")
-    else:
-        print("\nThanks for using 'Secreat Share'!\n")
-
-'''
