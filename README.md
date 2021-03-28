@@ -13,11 +13,12 @@ cater.app()
 <!-- See `examples` folder for more. -->
 
 ## Installation ⚠️
-
+<!--
 ```sh
 pip install cater
 ```  
-or  
+or
+-->
 ```sh
 pip install git+https://github.com/ravi-prakash1907/cater.git
 ```
