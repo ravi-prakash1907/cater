@@ -63,4 +63,4 @@ def app():
     if firstRun:
         print("\nSomething went wrong!!\nApp terminated unexpectedly!!")
     else:
-        print("\nThanks for using 'Secreat Share'!\n")
+        print("\nThanks for using 'cater'!\n")
