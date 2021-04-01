@@ -4,7 +4,7 @@ An instent file sharing application based on TCP
 ### Accessing through Terminal/Command-line  
 The python version of this application is latest!  
 
-1. Open the app by running ```python3 baatoApp.py```  
+1. Open the app by running ```python3 cater.py```  
 2. The the desired option.
     - If you are the sender:  
         - Set up your `IP-Address` or `Hosting URL`  
