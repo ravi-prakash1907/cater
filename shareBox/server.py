@@ -42,7 +42,7 @@ class server:
 		
 		# Accepting the Connections of the client willing to connect
 		self.connection, self.address = self.sockServer.accept()
-		print(f"Connection from {self.address} (reciver) has been established!!!")
+		print(f"Connection from {self.address} (receiver) has been established!!!")
 
 
 	def __loadFiles__(self):
