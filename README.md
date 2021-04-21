@@ -22,6 +22,11 @@ or
 ```sh
 pip install git+https://github.com/ravi-prakash1907/cater.git
 ```
+_or_  
+
+```sh
+pip3 install git+https://github.com/ravi-prakash1907/cater.git
+```
 
 ## Requirements 🌌
 
