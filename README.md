@@ -15,7 +15,7 @@ cater.app()
 ## Installation ⚠️
 
 ```sh
-pip install -i https://test.pypi.org/simple/ cater
+pip install cater
 ```  
 or
 
