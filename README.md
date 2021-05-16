@@ -13,19 +13,14 @@ cater.app()
 <!-- See `examples` folder for more. -->
 
 ## Installation ⚠️
-<!--
-```sh
-pip install cater
-```  
-or
--->
-```sh
-pip install git+https://github.com/ravi-prakash1907/cater.git
-```
-_or_  
 
 ```sh
-pip3 install git+https://github.com/ravi-prakash1907/cater.git
+pip install -i https://test.pypi.org/simple/ cater
+```  
+or
+
+```sh
+pip install git+https://github.com/ravi-prakash1907/cater.git
 ```
 
 ## Requirements 🌌
