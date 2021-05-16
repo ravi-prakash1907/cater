@@ -1,13 +1,15 @@
-from setuptools import setup
+#from setuptools import setup
+from distutils.core import setup
 
 setup(
-    name = 'cater', # pkg name
-    version='0.1',
+    name = 'cater',
+    packages=['cater','shareBox'],
+    version = '0.1',  # Ideally should be same as your GitHub release tag varsion
     description='A TCP based file sharing application',
-    url='github.com/ravi-prakash1907/cater.git', # post the http "clone" link
     author='Ravi Prakash',
     author_email='ravi.cs20@iiitmk.ac.in',
-    license='MIT',
-    packages=['cater','shareBox'],
-    zip_safe=False
+    url='github.com/ravi-prakash1907/cater.git', # github source url
+    download_url = 'github.com/ravi-prakash1907/cater/archive/refs/tags/v1.0.tar.gz',
+    keywords = ['v0.1', 'cater'],
+    classifiers = []
 )
