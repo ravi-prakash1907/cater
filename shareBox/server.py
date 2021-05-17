@@ -14,7 +14,7 @@ class server:
 		########################
 
 		# Defining Hostname and Port
-		self.host = input("\nSpecify host's URL or IP-Address \n(just press enter to use default): ")
+		self.host = self.__getIP__()#input("\nSpecify host's URL or IP-Address \n(just press enter to use default): ")
 		if self.host is None:
 			self.host = '127.0.0.1'
 		
@@ -44,6 +44,15 @@ class server:
 		self.connection, self.address = self.sockServer.accept()
 		print(f"Connection from {self.address} (receiver) has been established!!!")
 
+	# to auto detect the ip-address
+	def __getIP__(self):
+		os.system("ifconfig | grep broadcast | cat | tail -1 > ip.txt")
+		with open('ip.txt', 'r') as f:
+			line = f.read()
+		addrinfo = ' '.join(line.split())
+		ipaddr = addrinfo.split(' ')[1]
+		os.system("rm ip.txt")
+		return ipaddr
 
 	def __loadFiles__(self):
 		# Getting the filenames from the Input to send to the client
@@ -114,7 +123,8 @@ class server:
 			f.close()	# Closing the file
 
 		et = time.time()
-		print("\nFile(s) shared in {} seconds!\n".format(et-st)+"-"*12)
+		timeTaken = et-st
+		print("\nFile(s) shared in {0:.5f} seconds!\n".format(timeTaken)+"-"*12)
 
 		self.connection.close()	# Closing the connection
 
