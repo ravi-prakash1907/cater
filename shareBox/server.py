@@ -78,7 +78,7 @@ class server:
 		## even if they are from diff. directory
 
 		# making a compression directory
-		os.system("mkdir caretCompressed")
+		os.system("mkdir caterCompressed")
 
 		# coplying all files in this dir
 		for fileName in fileNames:
@@ -86,17 +86,17 @@ class server:
 				newFileName = fileName.split('/')[-1]
 			else:
 				newFileName = fileName
-			os.system("cp {} ./caretCompressed/{}".format(fileName, newFileName))
+			os.system("cp {} ./caterCompressed/{}".format(fileName, newFileName))
 		
 		# compressing the new dirctory
 		# this uniquename means that client will have to do auto-extract 
-		os.system("tar -cvjf caretCompressed.tar.bz2 ./caretCompressed/ > /dev/null") 
-		print("Your files are successfully compressed as 'caretCompressed.tar.bz2'")
+		os.system("tar -cvjf caterCompressed.tar.bz2 ./caterCompressed/ > /dev/null") 
+		print("Your files are successfully compressed as 'caterCompressed.tar.bz2'")
 
 		## setting flag for post share removal of folder/file
 		self.caretCompression = True
 		
-		return ['caretCompressed.tar.bz2']
+		return ['caterCompressed.tar.bz2']
 
 	def definingHeader(self):
 		self.filelist = self.__loadFiles__()
@@ -160,8 +160,8 @@ class server:
 
 		## removing generated files if compression was done by cater
 		if self.caretCompression:
-			os.system("rm -rf caretCompressed")
-			os.system("rm caretCompressed.tar.bz2")
+			os.system("rm -rf caterCompressed")
+			os.system("rm caterCompressed.tar.bz2")
 		
 		self.connection.close()	# Closing the connection
 

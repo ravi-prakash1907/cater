@@ -36,16 +36,16 @@ class client:
 
 	def checkNextract(self):
 		## check if cater sent file after compressing
-		## special name 'caretCompressed.tar.bz2'
-		if os.path.isfile('received/caretCompressed.tar.bz2'):
+		## special name 'caterCompressed.tar.bz2'
+		if os.path.isfile('received/caterCompressed.tar.bz2'):
 			## extracting into current directory
-			os.system("tar -xvjf received/caretCompressed.tar.bz2 > /dev/null")
+			os.system("tar -xvjf received/caterCompressed.tar.bz2 > /dev/null")
 			## restoring the files
-			os.system("mv caretCompressed/* received/")
+			os.system("mv caterCompressed/* received/")
 			
 			## removing redundent stuff
-			os.system("rm -rf caretCompressed")
-			os.system("rm -rf received/caretCompressed.tar.bz2")
+			os.system("rm -rf caterCompressed")
+			os.system("rm -rf received/caterCompressed.tar.bz2")
 
 	def formatFileName(self, gotName):
 		if '/' in gotName:
