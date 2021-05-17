@@ -1,14 +1,31 @@
+<<<<<<< HEAD
 # cater - 2.0 📤 
+=======
+# cater:1.1 📤
+>>>>>>> 8864ab3e387b5b3d1a9d0208cd3e3f7fe83b2752
 
 A Python library for instent file sharing, based on TCP.
 
 ## What's New  
 
+<<<<<<< HEAD
 Currently we are working to enhence the application and library with many new features.  
 Following are out current aims:
 1. Make the sharing speed more presentable at sender's end  
 2. Compress/Extract feature if multiple files are to be shared  
 3. Atomatically detect the Broadcast IP and lunch server smoothly
+=======
+In this final version (v1.1) of the `cater`, we have added following features:  
+
+### 1. Auto IP Detection  
+It is capable of detecting the IP-Address at its own in order to host the server while sharing the files at the sender's end. You won't be worry about finding you IP every time, when you are willing to share files quickly.  
+It will also notify you the server's IP address so that receiver can easily connect.  
+
+### 2. Better Speed Display  
+The `cater` application will now be showing you the time taken to to complete the transfer in a far better way.  
+Here, instead of showing the long length of time units, now sender will see time taken in seconds (up to 5 decimal places)  
+
+>>>>>>> 8864ab3e387b5b3d1a9d0208cd3e3f7fe83b2752
 
 ## Usage 🎯
 
