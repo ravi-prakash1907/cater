@@ -38,7 +38,7 @@ pip install git+https://github.com/ravi-prakash1907/cater.git
 
 ## Requirements 🌌
 
-Support for Python 3.2 and greater.
+Support for Python 3.0 and greater.
 
 ## Development 🛎️
 
