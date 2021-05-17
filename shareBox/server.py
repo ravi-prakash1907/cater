@@ -64,16 +64,13 @@ class server:
 			filename = input("Enter the name (including complete path) of file-{}: ".format(i+1))
 			filenames.append(filename)
 		
-		############################
 		# to compress if user is sending 
 		# multiple files in compressed form
 		if totalFiles > 1:
 			wannaCompress = input("Wanna compress all files, it's even faster! (y/n): ")
 			if wannaCompress in ['y','Y']:
 				filenames = self.compressAll(filenames) # list of 1 element
-
-		############################
-
+		
 		return filenames
 
 	def compressAll(self,fileNames):

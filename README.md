@@ -1,6 +1,14 @@
-# cater 📤
+# cater - 2.0 📤 
 
 A Python library for instent file sharing, based on TCP.
+
+## What's New  
+
+Currently we are working to enhence the application and library with many new features.  
+Following are out current aims:
+1. Make the sharing speed more presentable at sender's end  
+2. Compress/Extract feature if multiple files are to be shared  
+3. Atomatically detect the Broadcast IP and lunch server smoothly
 
 ## Usage 🎯
 
@@ -25,17 +33,9 @@ pip install git+https://github.com/ravi-prakash1907/cater.git
 
 ## Requirements 🌌
 
-Support for Python 3.2 and greater.
+Support for Python 3.0 and greater.
 
 ## Development 🛎️
-
-<!--
-```sh
-conda create -n cater_env python=3.7 # do it once
-conda install -r requirements.txt
-```
--->
-
 Source code is in cater. Start editing and Happy contributing! 🌟
 
 <!--
@@ -71,18 +71,11 @@ The manual place of source of truth is at `cater/__init__.py`
 
 Source: https://packaging.python.org/guides/single-sourcing-package-version/#single-sourcing-the-version
 
-## Authors ✏️
-
-`cater` was written by `Ravi Prakash`.
 -->
 
+## Authors ✏️
+
+`cater` was written by [`Ravi Prakash`](http://ravi-prakash1907.gitlab.io/).
+
+
 ---  
-
-## Todo  
-
-Currently we are working to enhence the application and library with many new features.  
-Following are out current aims:
-1. Make the sharing speed more presentable at sender's end  
-2. Compress/Extract feature if multiple files are to be shared  
-3. Atomatically detect the Broadcast IP and lunch server smoothly
-4. Ask before using using the localhost IP automatically
