@@ -99,14 +99,14 @@ class server:
 		## setting flag for post share removal of folder/file
 		self.caretCompression = True
 		
-		return list('caretCompressed.tar.bz2')
+		return ['caretCompressed.tar.bz2']
 
 	def definingHeader(self):
 		self.filelist = self.__loadFiles__()
 
 		i = 1
 		tempHeader = {}
-
+		
 		# Defining Data Dictionary Meta Data
 		for filename in self.filelist:
 			# Checking File Size
