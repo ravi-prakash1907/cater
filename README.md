@@ -28,7 +28,7 @@ cater.app()
 ## Installation ⚠️
 
 ```sh
-pip install cater
+pip install cater==1.1
 ```  
 or
 
