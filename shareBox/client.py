@@ -34,6 +34,19 @@ class client:
 		except:
 			print("Currently server is down!! Try later!")
 
+	def checkNextract(self):
+		## check if cater sent file after compressing
+		## special name 'caretCompressed.tar.bz2'
+		if os.path.isfile('received/caretCompressed.tar.bz2'):
+			## extracting into current directory
+			os.system("tar -xvjf received/caretCompressed.tar.bz2")
+			## restoring the files
+			os.system("mv caretCompressed/* received/")
+			
+			## removing redundent stuff
+			os.system("rm -rf caretCompressed")
+			os.system("rm -rf received/caretCompressed.tar.bz2")
+
 	def formatFileName(self, gotName):
 		if '/' in gotName:
 			gotName = gotName.split('/')[-1]
@@ -69,7 +82,7 @@ class client:
 				f.close()
 
 			print("\nFile(s) received...\n"+"-"*12)
-		
+			self.checkNextract()
 
 		###########
 		self.sockClient.close()	# Closing the Connection
