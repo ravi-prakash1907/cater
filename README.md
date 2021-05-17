@@ -75,3 +75,14 @@ Source: https://packaging.python.org/guides/single-sourcing-package-version/#sin
 
 `cater` was written by `Ravi Prakash`.
 -->
+
+---  
+
+## Todo  
+
+Currently we are working to enhence the application and library with many new features.  
+Following are out current aims:
+1. Make the sharing speed more presentable at sender's end  
+2. Compress/Extract feature if multiple files are to be shared  
+3. Atomatically detect the Broadcast IP and lunch server smoothly
+4. Ask before using using the localhost IP automatically
