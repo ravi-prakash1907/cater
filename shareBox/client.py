@@ -39,7 +39,7 @@ class client:
 		## special name 'caretCompressed.tar.bz2'
 		if os.path.isfile('received/caretCompressed.tar.bz2'):
 			## extracting into current directory
-			os.system("tar -xvjf received/caretCompressed.tar.bz2")
+			os.system("tar -xvjf received/caretCompressed.tar.bz2 > /dev/null")
 			## restoring the files
 			os.system("mv caretCompressed/* received/")
 			

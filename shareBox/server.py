@@ -93,8 +93,8 @@ class server:
 		
 		# compressing the new dirctory
 		# this uniquename means that client will have to do auto-extract 
-		os.system("tar -cvjf caretCompressed.tar.bz2 ./caretCompressed/") 
-		print("Successfully compressed as 'caretCompressed.tar.bz2'")
+		os.system("tar -cvjf caretCompressed.tar.bz2 ./caretCompressed/ > /dev/null") 
+		print("Your files are successfully compressed as 'caretCompressed.tar.bz2'")
 
 		## setting flag for post share removal of folder/file
 		self.caretCompression = True
