@@ -29,6 +29,7 @@ class server:
 		self.headerDetails = {}
 		# list of files that are to be send
 		self.filelist = []
+		self.caretCompression = False
 
 		#########################
 
@@ -63,8 +64,42 @@ class server:
 			filename = input("Enter the name (including complete path) of file-{}: ".format(i+1))
 			filenames.append(filename)
 		
+		############################
+		# to compress if user is sending 
+		# multiple files in compressed form
+		if totalFiles > 1:
+			wannaCompress = input("Wanna compress all files, it's even faster! (y/n): ")
+			if wannaCompress in ['y','Y']:
+				filenames = self.compressAll(filenames) # list of 1 element
+
+		############################
+
 		return filenames
 
+	def compressAll(self,fileNames):
+		## assuming all the files have unique names
+		## even if they are from diff. directory
+
+		# making a compression directory
+		os.system("mkdir caretCompressed")
+
+		# coplying all files in this dir
+		for fileName in fileNames:
+			if '/' in fileName:
+				newFileName = fileName.split('/')[-1]
+			else:
+				newFileName = fileName
+			os.system("cp {} ./caretCompressed/{}".format(fileName, newFileName))
+		
+		# compressing the new dirctory
+		# this uniquename means that client will have to do auto-extract 
+		os.system("tar -cvjf caretCompressed.tar.bz2 ./caretCompressed/") 
+		print("Successfully compressed as 'caretCompressed.tar.bz2'")
+
+		## setting flag for post share removal of folder/file
+		self.caretCompression = True
+		
+		return list('caretCompressed.tar.bz2')
 
 	def definingHeader(self):
 		self.filelist = self.__loadFiles__()
@@ -126,6 +161,11 @@ class server:
 		timeTaken = et-st
 		print("\nFile(s) shared in {0:.5f} seconds!\n".format(timeTaken)+"-"*12)
 
+		## removing generated files if compression was done by cater
+		if self.caretCompression:
+			os.system("rm -rf caretCompressed")
+			os.system("rm caretCompressed.tar.bz2")
+		
 		self.connection.close()	# Closing the connection
 
 
