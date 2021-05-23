@@ -1,1 +1,5 @@
 theme: jekyll-theme-leap-day
+show_downloads: true
+github:
+  zip_url: https://github.com/ravi-prakash1907/cater/archive/refs/tags/v1.1.zip
+  site.github.tar_url: https://github.com/ravi-prakash1907/cater/archive/refs/tags/v1.1.tar.gz
