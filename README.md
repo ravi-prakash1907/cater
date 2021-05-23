@@ -73,7 +73,8 @@ python -m unittest
 
 ## Licence ✅
 
-MIT. See LICENSE.md
+MIT. See LICENSE.md  
+
 <!--
 ## Version
 
