@@ -22,10 +22,11 @@ cater.app()
 
 ## Installation ⚠️
 
+To install using **pip** from PyPi  
 ```sh
 pip install cater
 ```  
-or
+To install from **github**
 
 ```sh
 pip install git+https://github.com/ravi-prakash1907/cater.git
@@ -59,7 +60,8 @@ python -m unittest
 
 ## Licence ✅
 
-MIT. See LICENSE.md
+MIT. See LICENSE.md  
+
 <!--
 ## Version
 
@@ -70,11 +72,11 @@ Third is patch and means small backwards compatible changes.
 The manual place of source of truth is at `cater/__init__.py`
 
 Source: https://packaging.python.org/guides/single-sourcing-package-version/#single-sourcing-the-version
+-->  
 
 -->
 
 ## Authors ✏️
-
 `cater` was written by [`Ravi Prakash`](http://ravi-prakash1907.gitlab.io/).
 
 
