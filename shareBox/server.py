@@ -14,9 +14,12 @@ class server:
 		########################
 
 		# Defining Hostname and Port
-		self.host = self.__getIP__()#input("\nSpecify host's URL or IP-Address \n(just press enter to use default): ")
-		if self.host is None:
-			self.host = '127.0.0.1'
+		try:
+			self.host = self.__getIP__()
+		except:
+			self.host = input("\nSpecify host's URL or IP-Address \n(just press enter to use default): ")
+			if self.host is None:
+				self.host = '127.0.0.1'
 		
 		# Creating Socket
 		self.sockServer = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
