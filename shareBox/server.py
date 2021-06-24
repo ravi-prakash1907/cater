@@ -14,9 +14,12 @@ class server:
 		########################
 
 		# Defining Hostname and Port
-		self.host = self.__getIP__()#input("\nSpecify host's URL or IP-Address \n(just press enter to use default): ")
-		if self.host is None:
-			self.host = '127.0.0.1'
+		try:
+			self.host = self.__getIP__()
+		except:
+			self.host = input("\nSpecify host's URL or IP-Address \n(just press enter to use default): ")
+			if self.host is None:
+				self.host = '127.0.0.1'
 		
 		# Creating Socket
 		self.sockServer = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -29,6 +32,7 @@ class server:
 		self.headerDetails = {}
 		# list of files that are to be send
 		self.filelist = []
+		self.caretCompression = False
 
 		#########################
 
@@ -63,15 +67,46 @@ class server:
 			filename = input("Enter the name (including complete path) of file-{}: ".format(i+1))
 			filenames.append(filename)
 		
+		# to compress if user is sending 
+		# multiple files in compressed form
+		if totalFiles > 1:
+			wannaCompress = input("Wanna compress all files, it's even faster! (y/n): ")
+			if wannaCompress in ['y','Y']:
+				filenames = self.compressAll(filenames) # list of 1 element
+		
 		return filenames
 
+	def compressAll(self,fileNames):
+		## assuming all the files have unique names
+		## even if they are from diff. directory
+
+		# making a compression directory
+		os.system("mkdir caterCompressed")
+
+		# coplying all files in this dir
+		for fileName in fileNames:
+			if '/' in fileName:
+				newFileName = fileName.split('/')[-1]
+			else:
+				newFileName = fileName
+			os.system("cp {} ./caterCompressed/{}".format(fileName, newFileName))
+		
+		# compressing the new dirctory
+		# this uniquename means that client will have to do auto-extract 
+		os.system("tar -cvjf caterCompressed.tar.bz2 ./caterCompressed/ > /dev/null") 
+		print("Your files are successfully compressed as 'caterCompressed.tar.bz2'")
+
+		## setting flag for post share removal of folder/file
+		self.caretCompression = True
+		
+		return ['caterCompressed.tar.bz2']
 
 	def definingHeader(self):
 		self.filelist = self.__loadFiles__()
 
 		i = 1
 		tempHeader = {}
-
+		
 		# Defining Data Dictionary Meta Data
 		for filename in self.filelist:
 			# Checking File Size
@@ -126,6 +161,11 @@ class server:
 		timeTaken = et-st
 		print("\nFile(s) shared in {0:.5f} seconds!\n".format(timeTaken)+"-"*12)
 
+		## removing generated files if compression was done by cater
+		if self.caretCompression:
+			os.system("rm -rf caterCompressed")
+			os.system("rm caterCompressed.tar.bz2")
+		
 		self.connection.close()	# Closing the connection
 
 
