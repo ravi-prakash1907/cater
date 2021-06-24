@@ -8,7 +8,7 @@ Currently we are working to enhence the application and library with many new fe
 Following are out current aims:
 1. Make the sharing speed more presentable at sender's end  
 2. Compress/Extract feature if multiple files are to be shared  
-3. Atomatically detect the Broadcast IP and lunch server smoothly
+3. Atomatically detect the Broadcast IP and lunches the server smoothly
 
 ## Usage 🎯
 
